@@ -1,9 +1,12 @@
 
 
-import java.io.BufferedWriter;
-import repository.*;
-import controller.*;
-import ui.BudgetUI;;
+import controller.EntryController;
+import controller.MemberController;
+import repository.EntryRepository;
+import repository.MemberRepository;
+import ui.BudgetUI;
+
+;
 
 public class App {
 	public static void main(String[] args) {

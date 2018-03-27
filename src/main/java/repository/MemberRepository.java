@@ -1,23 +1,11 @@
 package repository;
 
+import model.Member;
+
 import java.io.BufferedReader;
-
-import model.*;
-
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-
-import exceptions.InvalidBudgetException;
-import exceptions.InvalidNameException;
-import exceptions.InvalidTypeException;
 
 public class MemberRepository {
 	private List<Member> members = new ArrayList<Member>();
@@ -49,4 +37,5 @@ public class MemberRepository {
 	 public void addMember(String name,int memberId){
 		 members.add(new Member(name,memberId));		 	 
 	 }
+	 public List<Member> getAll(){return members;}
 }

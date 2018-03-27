@@ -1,11 +1,11 @@
 package ui;
 
-import java.util.ArrayList;
+import controller.EntryController;
+import controller.MemberController;
+import model.Entry;
+
 import java.util.List;
 import java.util.Scanner;
-
-import model.*;
-import controller.*;
 
 public class BudgetUI {
 	private MemberController ctrlm;
@@ -78,8 +78,12 @@ public class BudgetUI {
 				String name = in.nextLine();
 				System.out.println("Enter id:");
 				int id = Integer.parseInt(in.nextLine());
-				ctrlm.addMember(name,id);		
-				
+				try {
+					ctrlm.addMember(name,id);
+				} catch (Exception e) {
+					System.err.println(e.getMessage());
+				}
+
 			}
 			if(cmd==2)
 			{
