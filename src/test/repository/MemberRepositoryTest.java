@@ -13,14 +13,14 @@ public class MemberRepositoryTest {
     }
 
     @Test
-    public void testcase1() {
+    public void testcasecorect() {
         try {
             r.addMember("Bam", 0);
         } catch (Exception e) {
             fail(e.getMessage());
         }
     }
-
+/*
     @Test
     public void testcase2() {
         try {
@@ -168,5 +168,5 @@ public class MemberRepositoryTest {
         } catch (Exception e) {
             fail(e.getMessage());
         }
-    }
+    }*/
 }
