@@ -61,7 +61,6 @@ public class BudgetUI {
 		System.out.println(menu);
 	}
 	
-	
 	public void Run()
 	{
 		printMenu();
@@ -73,22 +72,26 @@ public class BudgetUI {
 		while(cmd!=0)
 		{
 			if(cmd==1)
-			{								
+			{
+                try {
 				System.out.println("Enter name:");
 				String name = in.nextLine();
 				System.out.println("Enter id:");
 				int id = Integer.parseInt(in.nextLine());
-				try {
+
 					ctrlm.addMember(name,id);
-				} catch (Exception e) {
-					System.err.println(e.getMessage());
-				}
+					System.out.println("Member added");
+				}catch (NumberFormatException e){
+                    System.err.println("id not a positive number!");
+                } catch (Exception e) {
+                    System.err.println(e.getMessage());
+                }
 
 			}
 			if(cmd==2)
 			{
-				
-				
+
+                try {
 				System.out.println("Enter type:");
 				String type = in.nextLine();
 				
@@ -99,8 +102,13 @@ public class BudgetUI {
 				System.out.println("Enter the id of the member:");
 				String idS = in.nextLine();
 				int idInt=Integer.parseInt(idS);
-						
 				ctrle.addEntry(type,valueInt,idInt);
+				System.out.println("Entry added.");
+				} catch (NumberFormatException e){
+                    System.err.println("id not a positive number!");
+                } catch (Exception e){
+					System.err.println(e.getMessage());
+				}
 			    
 			}
 			if(cmd==3)
@@ -113,7 +121,9 @@ public class BudgetUI {
 				
 				List<Entry> allE= ctrle.allEntriesForMember(idInt);
 				for (int j=0;j<allE.size();j++)
-					System.out.println(allE.get(j).toString());				
+					System.out.println(allE.get(j).toString());
+				if(allE.size()==0)
+					System.out.println("No entry found");
 			}
 
 			printMenu();

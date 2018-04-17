@@ -20,7 +20,7 @@ public class MemberRepositoryTest {
             fail(e.getMessage());
         }
     }
-/*
+
     @Test
     public void testcase2() {
         try {
@@ -168,5 +168,5 @@ public class MemberRepositoryTest {
         } catch (Exception e) {
             fail(e.getMessage());
         }
-    }*/
+    }
 }

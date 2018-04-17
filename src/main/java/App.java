@@ -15,7 +15,7 @@ public class App {
 			EntryRepository repoe=new EntryRepository();
 		
 			MemberController ctrlm = new MemberController(repom);
-			EntryController crtle =new EntryController(repoe);
+			EntryController crtle =new EntryController(repoe, repom);
 		
 			BudgetUI console = new BudgetUI(ctrlm,crtle);
 			console.Run();

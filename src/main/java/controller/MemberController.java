@@ -1,6 +1,9 @@
 package controller;
 
+import model.Member;
 import repository.MemberRepository;
+
+import java.util.List;
 
 public class MemberController {
 	
@@ -14,4 +17,6 @@ public class MemberController {
 
         mr.addMember(name,memberId);
     }
+
+    public List<Member> getAll(){return mr.getAll();}
 } 

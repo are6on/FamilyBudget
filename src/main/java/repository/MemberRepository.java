@@ -49,8 +49,10 @@ public class MemberRepository {
 			 if(!word && !Character.isUpperCase(c))
 				 throw new Exception("names should start with uppercase!");
 			 else
-			 if(c==' '||c=='-')
-				 word=false;
+			 if(c==' '||c=='-') {
+				 word = false;
+				 continue;
+			 }
 			 else
 			 if(Character.isDigit(c))
 				 throw new Exception("names do not contain numbers!");
