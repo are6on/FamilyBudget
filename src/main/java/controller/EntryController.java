@@ -26,8 +26,10 @@ public class EntryController {
 
         boolean found = false;
         for (Member e : erm.getAll())
-            if (e.getId() == idInt)
+            if (e.getId() == idInt) {
                 found = true;
+                break;
+            }
         if (!found)
             throw new Exception("Member not found!");
         er.addEntry(type, valueInt, idInt);

@@ -43,7 +43,7 @@ public class IncrementalIntegretionTest {
 
 
     @Test
-    public void testCaseALL(){
+    public void testCaseABC(){
         try {
             rm.addMember("Tom",4);
             c.addEntry("cost",4,4);
